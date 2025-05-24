@@ -176,7 +176,7 @@ export function Navbar() {
           </div>
 
           <Link href="https://app.pictory.ai/signup" passHref>
-            <Button className="hidden md:inline-flex rounded-full">
+            <Button className="hidden md:inline-flex rounded-full" style={{ background: '#a259e6', color: '#fff' }}>
               Get Started Now →
             </Button>
           </Link>
@@ -254,7 +254,7 @@ export function Navbar() {
                   </div>
 
                   <Link href="https://app.pictory.ai/signup" passHref>
-                    <Button className="w-full rounded-full" onClick={() => setOpen(false)}>
+                    <Button className="w-full rounded-full" style={{ background: '#6647b7', color: '#fff' }} onClick={() => setOpen(false)}>
                       Get Started Now →
                     </Button>
                   </Link>
