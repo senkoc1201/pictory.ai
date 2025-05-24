@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'CerebriSansPro';
+  src: url('/assets/fonts/CerebriSansPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CerebriSansPro';
+  src: url('/assets/fonts/CerebriSansPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CerebriSansPro';
+  src: url('/assets/fonts/CerebriSansPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PictorySans';
+  src: url('/assets/fonts/Pictory-Sans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PictorySans';
+  src: url('/assets/fonts/Pictory-Sans-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 35 36 41;
+
+    --card: 255 255 255;
+    --card-foreground: 35 36 41;
+
+    --popover: 255 255 255;
+    --popover-foreground: 35 36 41;
+
+    --primary: 269 57 83;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 250 245 255;
+    --secondary-foreground: 35 36 41;
+
+    --muted: 240 238 248;
+    --muted-foreground: 115 115 128;
+
+    --accent: 240 238 248;
+    --accent-foreground: 35 36 41;
+
+    --destructive: 0 84 100;
+    --destructive-foreground: 255 255 255;
+
+    --border: 240 238 248;
+    --input: 240 238 248;
+    --ring: 269 57 83;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'CerebriSansPro', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'PictorySans', 'CerebriSansPro', system-ui, sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply container max-w-7xl mx-auto px-4 md:px-6;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white rounded-full px-6 py-2.5 font-medium hover:bg-primary/90 transition-colors;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary rounded-full px-6 py-2.5 font-medium hover:bg-primary/10 transition-colors;
+  }
+}
