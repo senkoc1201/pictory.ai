@@ -27,7 +27,7 @@ export default function RatingsBar() {
                 <Star key={idx} />
               ))}
             </div>
-            <span className="text-sm text-[#2d2d2d] font-semibold mt-1">{r.label}</span>
+            <span className="text-sm text-[#2d2d2d] mt-1">{r.label}</span>
           </div>
         ))}
       </div>

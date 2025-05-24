@@ -17,12 +17,12 @@ export function CTA() {
             </p>
             <div className="space-x-4">
               <Link href="https://app.pictory.ai/signup" passHref>
-                <Button className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                <Button className="bg-primary hover:bg-primary/90 text-white rounded-full" style={{ background: '#a259e6', color: '#fff' }} >
                   Get Started for Free
                 </Button>
               </Link>
               <Link href="https://calendly.com/d/cq7g-7c7-ryz" passHref>
-                <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-full">
+                <Button className="text-white hover:bg-white/10 rounded-full" style={{ background: '#a259e6', color: '#fff' }} >
                   Talk to Sales
                 </Button>
               </Link>

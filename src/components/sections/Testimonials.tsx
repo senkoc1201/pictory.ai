@@ -36,7 +36,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-16 bg-[#f4f2fb]">
+    <section className="py-16 bg-[#ede4f6]">
       <div className="container-wide">
         <h2 className="text-3xl font-bold text-center mb-4">
           Trusted by Content Creators Worldwide

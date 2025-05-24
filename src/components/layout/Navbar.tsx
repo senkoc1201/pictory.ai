@@ -18,27 +18,39 @@ const navItems = [
     title: "Features",
     items: [
       {
-        icon: "/assets/images/text-to-video-icon.svg",
+        icon: "/assets/images/ScriptToVideo@2x.png",
         title: "Text to Video",
-        description: "Turn text into engaging videos instantly.",
+        description: "Turn text into engaging videos instantly. Perfect for transforming blog posts, articles, and scripts into dynamic visual content for social media or presentation.",
         link: "/text-to-video"
       },
       {
-        icon: "/assets/images/url-to-video-icon.svg",
-        title: "URL to Video",
-        description: "Convert any web page into a captivating video with one click.",
-        link: "/url-to-video"
-      },
-      {
-        icon: "/assets/images/ai-video-editor-icon.svg",
+        icon: "/assets/images/TextToVideo@2x.png",
         title: "AI Video Editor",
-        description: "Edit videos with ease using AI-powered tools.",
+        description: "Edit videos with ease using AI-powered tools. Create professional-quality videos faster, with smart editing options that save you time and effort.",
         link: "/ai-video-editor"
       },
       {
-        icon: "/assets/images/image-to-video-icon.svg",
+        icon: "/assets/images/ArticleToVideo@2x.png",
+        title: "URL to Video",
+        description: "Convert any web page into a captivating video with one click. Quickly share online content in a video format that's engaging and easy to consume.",
+        link: "/url-to-video"
+      },
+      {
+        icon: "/assets/images/VisualToVideo@2x.png",
         title: "Image to Video",
-        description: "Transform photos & videos into stunning video slideshows.",
+        description: "Transform photos & videos into stunning video slideshows. Add transitions, music, and captions to bring your images to life in a seamless video format.",
+        link: "/image-to-video"
+      },
+      {
+        icon: "/assets/images/PPTToVideo@2x.png",
+        title: "PPT to Video",
+        description: "Convert PowerPoint slides into shareable videos. Add voiceovers, transitions, and music to make presentations more engaging and dynamic.",
+        link: "/image-to-video"
+      },
+      {
+        icon: "/assets/images/SmartRecord@2x.png",
+        title: "Smart Record",
+        description: "Capture screen activity effortlessly for tutorials, demos, or presentations. Ideal for recording on-screen actions in high quality, ready to share.",
         link: "/image-to-video"
       },
     ]
@@ -136,25 +148,26 @@ export function Navbar() {
                 <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary">
                   {navItem.title}
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-[400px] p-4">
-                  <div className="grid grid-cols-1 gap-3">
+                <DropdownMenuContent align="center" className="w-[1400px] max-w-[95vw] bg-white rounded-2xl shadow-xl p-8 overflow-x-auto mt-8">
+                  <div className="grid grid-cols-3 gap-6 mb-6">
                     {navItem.items.map((item) => (
-                      <DropdownMenuItem key={item.title} asChild>
-                        <Link href={item.link} className="flex items-start gap-3 p-2 rounded-lg hover:bg-muted">
-                          <div className="mt-1 h-6 w-6 shrink-0 text-muted-foreground">
-                            {/* Placeholder for icons */}
-                            <div className="h-6 w-6 rounded-full bg-primary/10" />
-                          </div>
-                          <div>
-                            <div className="text-sm font-medium">{item.title}</div>
-                            <div className="text-xs text-muted-foreground">
-                              {item.description}
-                            </div>
-                          </div>
-                        </Link>
-                      </DropdownMenuItem>
+                      <div key={item.title} className="flex items-start gap-4">
+                        <div className="w-22 h-22">
+                          <img src={item.icon} alt={item.title} className="w-22 h-22" />
+                        </div>
+                        <div className="text-gray-600">
+                          <p className="font-bold mb-1">{item.title}</p>
+                          <p className="font-[11px]">{item.description}</p>
+                        </div>
+                      </div>
                     ))}
                   </div>
+                  {/* <div className="flex items-center bg-[#7c3aed] rounded-xl px-8 py-4 mt-4 w-full">
+                      <button className="text-white font-semibold">Talk to Sales</button>
+                      <button className="text-white font-semibold px-6">
+                        Get Started Now →
+                      </button>
+                    </div> */}
                 </DropdownMenuContent>
               </DropdownMenu>
             ))}
@@ -254,7 +267,7 @@ export function Navbar() {
                   </div>
 
                   <Link href="https://app.pictory.ai/signup" passHref>
-                    <Button className="w-full rounded-full" style={{ background: '#6647b7', color: '#fff' }} onClick={() => setOpen(false)}>
+                    <Button className="w-full rounded-full" style={{ background: '#a259e6', color: '#fff' }} onClick={() => setOpen(false)}>
                       Get Started Now →
                     </Button>
                   </Link>

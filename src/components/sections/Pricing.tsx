@@ -81,7 +81,7 @@ const pricingPlans = [
 
 export function Pricing() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[#ede4f6]">
       <div className="container-wide">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
